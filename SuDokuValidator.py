@@ -95,7 +95,7 @@ class SuDokuValidator:
         return self.checkUnique(grids)
 
     def runValidator(self):
-        if self.checkDigitsCount() & self.checkIntegers() & self.checkRows()  & self.checkCols() & self.checkGrids():
+        if self.checkDigitsCount() and self.checkIntegers() and self.checkRows() and self.checkCols() and self.checkGrids():
             print('Valid')
         else:
             print('Not Valid')
