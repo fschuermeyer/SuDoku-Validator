@@ -12,9 +12,7 @@ class SuDoku:
     def checkIntegers(self):
         for row in self.grid:
             for i in row:
-                if i in range(1,10):
-                    pass
-                else:
+                if i not in range(1,10):
                     return False
         return True
     
