@@ -16,7 +16,6 @@ class SuDokuValidator:
                     pass
                 else:
                     return False
-        
         return True
     
     def checkUnique(self,inputs):
@@ -142,6 +141,7 @@ invalidSecond = [
     [8,0,0,2,0,3,0,0,9],
     [0,1,5,0,1,0,3,0,0]
 ]
+
 
 TheValidator = SuDokuValidator(valid)
 TheValidator.runValidator()
