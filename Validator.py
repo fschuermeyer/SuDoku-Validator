@@ -49,44 +49,20 @@ class SuDoku:
 
         for row in self.grid:
             if i < 3:
-                grids[0].append(row[0])
-                grids[0].append(row[1])
-                grids[0].append(row[2])
-
-                grids[1].append(row[3])
-                grids[1].append(row[4])
-                grids[1].append(row[5])
-
-                grids[2].append(row[6])
-                grids[2].append(row[7])
-                grids[2].append(row[8])
+                grids[0].extend((row[0],row[1],row[2]))
+                grids[1].extend((row[3],row[4],row[5]))
+                grids[2].extend((row[6],row[7],row[8]))
 
             if i < 6 and i > 2:
-                grids[3].append(row[0])
-                grids[3].append(row[1])
-                grids[3].append(row[2])
-
-                grids[4].append(row[3])
-                grids[4].append(row[4])
-                grids[4].append(row[5])
-
-                grids[5].append(row[6])
-                grids[5].append(row[7])
-                grids[5].append(row[8])
+                grids[3].extend((row[0],row[1],row[2]))
+                grids[4].extend((row[3],row[4],row[5]))
+                grids[5].extend((row[6],row[7],row[8]))
 
             if  i > 5:
-                grids[6].append(row[0])
-                grids[6].append(row[1])
-                grids[6].append(row[2])
-
-                grids[7].append(row[3])
-                grids[7].append(row[4])
-                grids[7].append(row[5])
-
-                grids[8].append(row[6])
-                grids[8].append(row[7])
-                grids[8].append(row[8])
-
+                grids[6].extend((row[0],row[1],row[2]))
+                grids[7].extend((row[3],row[4],row[5]))
+                grids[8].extend((row[6],row[7],row[8]))
+            
             i += 1
  
         return self.checkUnique(grids)
