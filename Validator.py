@@ -9,6 +9,9 @@ class SuDoku:
     def __init__(self,grid):
         self.grid = grid
 
+    def createList(self,n):
+        return [[] for i in range(0,n)]
+
     def checkIntegers(self):
         for row in self.grid:
             for i in row:
@@ -35,7 +38,7 @@ class SuDoku:
         return True
 
     def checkCols(self):
-        col = [[],[],[],[],[],[],[],[],[]]
+        col = self.createList(9)
 
         for row in self.grid:
             for i in range(0,9):
@@ -44,7 +47,7 @@ class SuDoku:
         return self.checkUnique(col)
 
     def checkGrids(self):
-        grids = [[],[],[],[],[],[],[],[],[]]
+        grids = self.createList(9)
         i = 0
 
         for row in self.grid:
