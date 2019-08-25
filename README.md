@@ -2,4 +2,4 @@
 
 Automatic Validation of SuDokus
 
-[Sudoku]: Result.png "Result"
+[Sudoku]: https://github.com/fschuermeyer/SuDoku-Validator/blob/master/Result.png "Result"
