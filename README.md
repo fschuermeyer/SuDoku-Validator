@@ -2,6 +2,6 @@
 
 Automativ Validation and Solving of Sudoku
 
-[Sudoku]: Result.png "Result"
+![Soduku](https://raw.githubusercontent.com/fschuermeyer/SuDoku-Validator/master/Result.png)
 
 
