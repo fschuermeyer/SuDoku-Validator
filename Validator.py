@@ -4,7 +4,7 @@ SUDOKU VALIDATOR
 from collections import OrderedDict
 
 
-class SuDoku:
+class Validator:
 
     def __init__(self,grid):
         self.grid = grid
@@ -37,16 +37,19 @@ class SuDoku:
             return False
         return True
 
-    def checkCols(self):
+    def convertToWay(self):
         col = self.createList(9)
 
         for row in self.grid:
             for i in range(0,9):
-                col[i].append(row[i]) 
-            
-        return self.checkUnique(col)
+                col[i].append(row[i])  
 
-    def checkGrids(self):
+        return col
+
+    def checkCols(self):
+        return self.checkUnique(self.convertToWay())
+
+    def convertInGrid(self):
         grids = self.createList(9)
         i = 0
 
@@ -67,14 +70,14 @@ class SuDoku:
                 grids[8].extend((row[6],row[7],row[8]))
             
             i += 1
- 
-        return self.checkUnique(grids)
+
+        return grids
+
+    def checkGrids(self):
+        return self.checkUnique(self.convertInGrid())
 
     def runValidator(self):
-        if self.checkDigitsCount() and self.checkIntegers() and self.checkRows() and self.checkCols() and self.checkGrids():
-            print('Valid')
-        else:
-            print('Not Valid')
+        return self.checkDigitsCount() and self.checkIntegers() and self.checkRows() and self.checkCols() and self.checkGrids()
 
-    
-
+    def shortValidator(self):
+        return self.checkRows() and self.checkCols() and self.checkGrids()
