@@ -1,5 +1,5 @@
-# SuDoku-Validator
+# Sudoku Validator and Solver 
 
-Automatic Validation of SuDokus
+Automativ Validation and Solving of Sudoku
 
-[Sudoku]: https://github.com/fschuermeyer/SuDoku-Validator/blob/master/Result.png "Result"
+[Sudoku]: Result.png "Result"
